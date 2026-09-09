@@ -1,1 +1,8 @@
-
+---
+- name: prosd playbook
+  hosts: all
+  task:
+  - name: Install the latest version of Apache
+    ansible.builtin.dnf:
+    name: httpd
+    state: latest
