@@ -1,19 +1,19 @@
-# ---
-# - name: prosd playbook
-#   hosts: all
-#   tasks:
-#   - name: Install the latest version of Apache
-#     ansible.builtin.dnf:
-#       name: httpd
-#       state: latest
+ ---
+ - name: prosd playbook
+   hosts: all
+   tasks:
+   - name: Install the latest version of Apache
+     ansible.builtin.dnf:
+      name: httpd
+      state: latest
 
   
----
-- name: prosdee playbook
-  hosts: all
-  tasks:
-  - name: Terminate every running instance in a region. Use with EXTREME caution.
-    amazon.aws.ec2_instance:
-    state: absent
-    filters:
-      instance-state-name: running
+#---
+#- name: prosdee playbook
+#  hosts: all
+#  tasks:
+#  - name: Terminate every running instance in a region. Use with EXTREME caution.
+#    amazon.aws.ec2_instance:
+#    state: absent
+#    filters:
+#     instance-state-name: running
