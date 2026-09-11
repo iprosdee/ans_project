@@ -3,7 +3,7 @@
    hosts: all
    become: true
    tasks:
- - name: Install the latest version of Apache
-   ansible.builtin.dnf:
-   name: httpd
-   state: latest
+   - name: Install the latest version of Apache
+     ansible.builtin.dnf:
+    name: httpd
+    state: latest
